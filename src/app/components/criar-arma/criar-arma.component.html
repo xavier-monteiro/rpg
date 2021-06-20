@@ -9,13 +9,17 @@
 		<label>Ataque</label>
 	</div>
   <div class="input-container">
-		<input type="text" required="" [value]="inteligencia" (input)="inteligencia = $event.target.value"/>
-		<label>Inteligência</label>
+		<input type="text" required="" [value]="durabilidade" (input)="durabilidade = $event.target.value"/>
+		<label>Durabilidade</label>
+	</div>
+  <div class="input-container">
+		<input type="text" required="" [value]="tipo" (input)="tipo= $event.target.value"/>
+		<label>Tipo de Arma</label>
 	</div>
   <div class="input-container">
 		<input type="text" required="" [value]="vida" (input)="vida = $event.target.value"/>
 		<label>Vida</label>
 	</div>
-		<button type="button" class="btn" (click)="criarPersonagem()">Criar Personagem</button>
+		<button type="button" class="btn" (click)="criarArma()">Criar Arma</button>
 </form>
 </div>

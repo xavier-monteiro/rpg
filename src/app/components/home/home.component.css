@@ -1,0 +1,39 @@
+
+#teste{
+  position: fixed;
+  left: 38vw;
+
+  bottom: 10vh;
+
+
+  width: 144px;
+  height: 64px;
+  background-image : url('https://cdn.discordapp.com/attachments/856187915825709056/856204262773489664/noBKG_KnightAttack_strip.png');
+  animation: moveX 1s steps(22) infinite;
+}
+
+
+@keyframes moveX{
+  from{background-position-x:0px;}
+  to{background-position-x:-3168px;}
+}
+
+
+#knight{
+  position: fixed;
+  left: 40vw;
+  top:32vh;
+}
+
+#info{
+  position: fixed;
+  left: 65vw;
+  top:40vh;
+
+  width: 100px;
+  height: 300px;
+
+
+  display: flex;
+  flex-direction: column;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AcessoBDService } from 'src/app/services/acesso-bd.service';
 
 @Component({
   selector: 'app-criar-user',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CriarUserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private acessoService: AcessoBDService) { }
 
   ngOnInit(): void {
+
+  }
+
+  name : string = "";
+  pass : string = "";
+
+  resultado : any ;
+
+  criarUser()
+  {
+    console.log(`Name: ${this.name} \nPass: ${this.pass}`);
+    this.acessoService.Signup(this.name,this.pass).subscribe(data => {this.resultado=data;console.log(this.resultado);});
+
   }
 
 }
