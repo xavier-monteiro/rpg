@@ -1,1 +1,51 @@
-<p>batalhar works!</p>
+
+
+<img id="start-btn" src="https://www.nicepng.com/png/full/110-1108890_start-button-game-start-button-png.png" (click)="BattleStarts()">
+
+<img id="my-player" src="https://www.pngarts.com/files/3/Gladiator-PNG-Picture.png">
+
+<div id="my-player-stats">
+
+  <p class="stats">Player Stats</p>
+  <p>Nome: {{myPlayer.nome}}</p>
+<p>Vida: {{myPlayer.vida}}</p>
+<p>Ataque: {{myPlayer.ataque}}</p>
+<p>Inteligência: {{myPlayer.inteligencia}}</p>
+
+
+<p class="stats">Weapon Stats</p>
+<p>Nome: {{myWeapon.nome}}</p>
+<p>Ataque: {{myWeapon.ataque}}</p>
+<p>Durabilidade: {{myWeapon.durabilidade}}</p>
+
+
+</div>
+
+<div id="chat-logs">
+
+<li class="message" *ngFor="let item of BattleArena.messages">{{item}}</li>
+
+</div>
+
+
+<div id="my-enemy-stats">
+
+  <p class="stats">Player Stats</p>
+  <p>Nome: {{myEnemy.nome}}</p>
+<p>Vida: {{myEnemy.vida}}</p>
+<p>Ataque: {{myEnemy.ataque}}</p>
+<p>Inteligência: {{myEnemy.inteligencia}}</p>
+
+
+<p class="stats">Weapon Stats</p>
+<p>Nome: {{hisWeapon.nome}}</p>
+<p>Ataque: {{hisWeapon.ataque}}</p>
+<p>Durabilidade: {{hisWeapon.durabilidade}}</p>
+
+
+</div>
+
+
+
+
+<img id="my-enemy" src="https://lh3.googleusercontent.com/proxy/TQCDvDcUkVDQgSJmBPrQUu0_D3G_1TjgDvvm4VfG_v7VTmgoRorO3KYc0GlLXSAVsJO1kxLZeKLIoCFZV0PaUO-t9HL7zccbqLSnmjqNS0L7i2b2v8oYpRI5uvizwDFKHHuL4Q">

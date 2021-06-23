@@ -10,7 +10,6 @@ export class AcessoBDService {
 
   constructor(private httpClient : HttpClient) { }
 
-  // vars
   link_Login: string = "http://moreiramoises.pt/server/apis/login.php";
   link_Signup: string = 'http://moreiramoises.pt/server/apis/signup.php';
   link_CriarPersonagem: string = 'http://moreiramoises.pt/server/apis/createChart.php';
@@ -18,12 +17,13 @@ export class AcessoBDService {
   link_GetId: string = 'http://moreiramoises.pt/server/apis/get/getChar.php?PlayerID=';
   link_GetInimigo: string = 'http://moreiramoises.pt/server/apis/get/getRandomChar.php?';
   linkUpdateChar: string = 'http://moreiramoises.pt/server/apis/updateChart.php';
+  link_GetArmaRandom : string = 'http://moreiramoises.pt/server/apis/get/getRandomArma.php';
 
 
   userThatLogged : Utilizador;
   userCharacter : Personagem;
 
-  // log in to an account
+
   LogIn(user, pass) {
     let dataToSend: FormData = new FormData();
 
@@ -33,7 +33,7 @@ export class AcessoBDService {
     return this.httpClient.post(this.link_Login, dataToSend);
   }
 
-  // create an account
+
   Signup(user, pass) {
     let dataToSend: FormData = new FormData();
 
@@ -43,7 +43,7 @@ export class AcessoBDService {
     return this.httpClient.post(this.link_Signup, dataToSend);
   }
 
-  // create a character
+
   createPersonagem(name, atk, int, vida, user, pass) {
     let dataToSend: FormData = new FormData();
 
@@ -74,17 +74,22 @@ export class AcessoBDService {
     return this.httpClient.post(this.link_CriarArma, dataToSend);
   }
 
-  // get a character by account id
+
   getPersonagem(id) {
     return this.httpClient.get(this.link_GetId + id);
   }
 
-  // get a random character
+
   getInimigo() {
     return this.httpClient.get(this.link_GetInimigo);
   }
 
-  // update your character character
+  getWeapon()
+  {
+    return this.httpClient.get(this.link_GetArmaRandom);
+  }
+
+
   atualizarStats(name,atk, int, vida,username,password) {
     let dataToSend: FormData = new FormData();
 

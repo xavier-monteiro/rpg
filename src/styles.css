@@ -6,6 +6,15 @@
   background-size: cover;
 }
 
+.bg-arena
+{
+
+    background-image: url('https://i.pinimg.com/originals/e1/fc/b1/e1fcb18c3d9cfc94f6d81d9994036c24.jpg');
+    background-position: center 40%;
+    background-size: cover;
+
+}
+
 body{
   height: 650 px;
   color: #fff;background-image: url("https://i.pinimg.com/originals/e4/02/de/e402de5ba9966a395b7ce97417af1620.jpg");
