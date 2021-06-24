@@ -1,25 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 .bg-img
 {
+  height: 100vh;
     background-image: url('https://pbs.twimg.com/media/EdUO5SAXYAAo4GR.png');
     background-size: 100%;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .bg-arena
 {
-
+  height: 100vh;
     background-image: url('https://i.pinimg.com/originals/e1/fc/b1/e1fcb18c3d9cfc94f6d81d9994036c24.jpg');
     background-position: center 40%;
     background-size: cover;
+    background-repeat: no-repeat;
 
 }
 
 body{
-  height: 650 px;
+  height: 100vh;
   color: #fff;background-image: url("https://i.pinimg.com/originals/e4/02/de/e402de5ba9966a395b7ce97417af1620.jpg");
   background-size: 100%;
   background-size: cover;
+  background-repeat: no-repeat;
 
 }
 

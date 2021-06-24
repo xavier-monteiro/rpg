@@ -18,7 +18,10 @@ export class BatalharComponent implements OnInit {
     if(!this.acessoBD.userThatLogged)
     {
       this.router.navigate(['/login']);
-    } else
+    } else if(!this.acessoBD.userCharacter)
+    {
+      this.router.navigate(['/criarPersonagem']);
+    }else
     {
       this.myPlayer = this.acessoBD.userCharacter;
        document.body.classList.add('bg-arena');

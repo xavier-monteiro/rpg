@@ -31,6 +31,6 @@ export class LoginComponent implements OnInit {
 
   goHome()
   {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/criarPersonagem']);
   }
 }

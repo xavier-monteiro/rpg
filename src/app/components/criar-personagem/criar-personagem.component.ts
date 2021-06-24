@@ -31,7 +31,7 @@ export class CriarPersonagemComponent implements OnInit {
     console.log(`Nome: ${this.nome} \nAtaque: ${this.ataque} \nInteligencia: ${this.inteligencia}\nVida: ${this.vida}`);
     console.log(`Username: ${this.acessoService.userThatLogged.nome} \nPassword: ${this.acessoService.userThatLogged.pass}`);
 
-    this.acessoService.createPersonagem(this.nome,this.ataque,this.inteligencia,this.vida,this.acessoService.userThatLogged.nome,this.acessoService.userThatLogged.pass).subscribe(data => {this.resultado=data;console.log(this.resultado);});
+    this.acessoService.createPersonagem(this.nome,this.ataque,this.inteligencia,this.vida,this.acessoService.userThatLogged.nome,this.acessoService.userThatLogged.pass).subscribe(data => {this.resultado=data;console.log(this.resultado); this.router.navigate(['/home']);});
 
 
   }
